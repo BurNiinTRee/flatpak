@@ -9,6 +9,7 @@ finish-args:
   - --filesystem=xdg-run/pipewire-0
   - --device=all
   - --system-talk-name=org.freedesktop.RealtimeKit1
+  - --share=network
 
 modules:
   - ./shared-modules/linux-audio/jack2.json
