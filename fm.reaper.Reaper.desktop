@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Exec=gamemoderun reaper
+Name=REAPER
+Categories=Audio;Video;AudioVideo;AudioVideoEditing;Recorder
+Icon=fm.reaper.Reaper
+MimeType=application/x-reaper-project;application/x-reaper-project-backup;application/x-reaper-theme
+StartupWMClass=REAPER

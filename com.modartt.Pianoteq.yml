@@ -1,0 +1,28 @@
+app-id: com.modartt.Pianoteq
+runtime: org.freedesktop.Platform
+runtime-version: '21.08'
+sdk: org.freedesktop.Sdk
+command: Pianoteq 7
+
+finish-args:
+  - --socket=x11
+  - --filesystem=xdg-run/pipewire-0
+  - --device=all
+  - --system-talk-name=org.freedesktop.RealtimeKit1
+
+modules:
+  - ./shared-modules/linux-audio/jack2.json
+  - ./gamemode.yml
+  - name: pianoteq
+    buildsystem: simple
+    build-commands:
+      - install -D -t /app/bin Pianoteq\ 7/x86-64bit/Pianoteq\ 7
+      - install -D -t /app/share/applications/ com.modartt.Pianoteq.desktop
+      - install -D -t /app/share/icons/hicolor/512x512/apps/ com.modartt.Pianoteq.png
+    sources:
+      - type: dir
+        path: ./pianoteq_linux_v754
+      - type: file
+        path: ./com.modartt.Pianoteq.desktop
+      - type: file
+        path: ./com.modartt.Pianoteq.png

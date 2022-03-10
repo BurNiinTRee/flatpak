@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Pianoteq
+Exec=gamemoderun "Pianoteq 7"
+Comment=Virtual Instrument from Modartt
+Categories=Audio
+Icon=com.modartt.Pianoteq

@@ -1,0 +1,19 @@
+app-id: org.rncbc.qpwgraph
+runtime: org.kde.Platform
+runtime-version: '6.2'
+sdk: org.kde.Sdk
+command: qpwgraph
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  - --device=dri
+  - --filesystem=xdg-run/pipewire-0
+  - --filesystem=home
+
+modules:
+  - name: QPWGraph
+    buildsystem: cmake-ninja
+    sources:
+      - type: git
+        url: https://gitlab.freedesktop.org/rncbc/qpwgraph
+        tag: v0.2.2

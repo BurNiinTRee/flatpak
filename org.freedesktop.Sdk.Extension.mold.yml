@@ -1,0 +1,30 @@
+id: org.freedesktop.Sdk.Extension.mold
+branch: '21.08'
+runtime: org.freedesktop.Sdk
+runtime-version: '21.08'
+build-extension: true
+sdk: org.freedesktop.Sdk
+
+build-options:
+  prefix: /usr/lib/sdk/mold
+
+modules:
+  - name: mold
+    buildsystem: simple
+    build-commands:
+      - make PREFIX=/usr/lib/sdk/mold -j $FLATPAK_BUILDER_N_JOBS
+      - make PREFIX=/usr/lib/sdk/mold install
+    sources:
+      - type: git
+        url: https://github.com/rui314/mold.git
+        tag: v1.1.1
+
+  - name: scripts
+    buildsystem: simple
+    build-commands:
+      - cp enable.sh /usr/lib/sdk/mold
+    sources:
+      - type: script
+        dest-filename: enable.sh
+        commands:
+          - export PATH=$PATH:/usr/lib/sdk/mold/bin
