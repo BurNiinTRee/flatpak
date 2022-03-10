@@ -1,0 +1,5 @@
+.flatpak-builder
+.vscode
+build-dir
+pianoteq_linux_v*
+com.modartt.Pianoteq.png
