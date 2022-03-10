@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [[ $# -lt 1 ]]; then
+    manifests=*.yml
+else
+    manifests="$@"
+fi
+
+for manifest in $manifests; do
+    flatpak-builder --force-clean build-dir --user --install "$manifest"
+done
