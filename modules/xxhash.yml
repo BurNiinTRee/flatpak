@@ -1,0 +1,9 @@
+name: lxxhash
+buildsystem: simple
+build-commands:
+  - make -j $FLATPAK_BUILDER_N_JOBS PREFIX=/app
+  - make install PREFIX=/app
+sources:
+  - type: git
+    url: https://github.com/ondesly/xxhash
+    tag: v0.8.0
