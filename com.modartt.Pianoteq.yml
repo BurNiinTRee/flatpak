@@ -12,7 +12,7 @@ finish-args:
 
 modules:
   - ./shared-modules/linux-audio/jack2.json
-  - ./gamemode.yml
+  - ./modules/gamemode.yml
   - name: pianoteq
     buildsystem: simple
     build-commands:

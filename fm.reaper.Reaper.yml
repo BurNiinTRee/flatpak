@@ -19,7 +19,7 @@ finish-args:
 
 modules:
   - ./shared-modules/linux-audio/jack2.json
-  - ./gamemode.yml
+  - ./modules/gamemode.yml
   - name: Reaper
     buildsystem: simple
     build-commands:
