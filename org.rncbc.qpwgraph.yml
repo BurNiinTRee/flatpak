@@ -16,4 +16,4 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/rncbc/qpwgraph
-        tag: v0.2.2
+        tag: v0.2.3
