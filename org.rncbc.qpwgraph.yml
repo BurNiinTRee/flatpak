@@ -8,7 +8,6 @@ finish-args:
   - --socket=x11
   - --device=dri
   - --filesystem=xdg-run/pipewire-0
-  - --filesystem=home
 
 modules:
   - name: QPWGraph
@@ -16,4 +15,4 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/rncbc/qpwgraph
-        tag: v0.2.3
+        tag: v0.2.4
