@@ -21,6 +21,7 @@ modules:
       - install -D -t /app/bin Pianoteq\ 7/x86-64bit/Pianoteq\ 7
       - install -D -t /app/share/applications/ com.modartt.Pianoteq.desktop
       - install -D -t /app/share/icons/hicolor/512x512/apps/ com.modartt.Pianoteq.png
+      - install -Dm644 -t /app/share/metainfo ./com.modartt.Pianoteq.metainfo.xml
     sources:
       - type: dir
         path: ./pianoteq_linux_v754
@@ -28,3 +29,5 @@ modules:
         path: ./com.modartt.Pianoteq.desktop
       - type: file
         path: ./com.modartt.Pianoteq.png
+      - type: file
+        path: ./com.modartt.Pianoteq.metainfo.xml

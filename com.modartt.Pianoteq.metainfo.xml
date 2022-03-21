@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.modartt.Pianoteq</id>
+  <launchable type="desktop-id">com.modartt.Pianoteq.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+  <name>Pianoteq</name>
+  <summary>Virtual Instrument from Modartt</summary>
+  <description>
+    <p>
+      Pianoteq is an award-winning virtual instrument which you can install on your computer (PC/Mac). It is available for Windows, macOS, and Linux, and will even run on some ARM-based boards such as the Raspberry Pi. It can be used both in standalone mode and as an instrument plug-in in VST, AAX, and AudioUnits hosts.
+    </p>
+    <p>
+      What makes Pianoteq superior to other virtual instruments is that the instruments are physically modelled and thus can simulate the playability and complex behaviour of real acoustic instruments. Because there are no samples, the file size is just a tiny fraction of that required by other virtual instruments, making Pianoteq perfect for any modern laptop. 
+    </p>
+  </description>
+  <categories>
+    <category>Audio</category>
+    <category>Video</category>
+    <category>AudioVideo</category>
+    <category>Recorder</category>
+  </categories>
+  <content_rating type="oars-1.1" />
+  <url type="homepage">https://modartt.com/pianoteq</url>
+  <releases>
+    <release version="7.5.4" date="2022-02-11"/>
+  </releases>
+</component>

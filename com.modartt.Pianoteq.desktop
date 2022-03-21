@@ -3,5 +3,5 @@ Type=Application
 Name=Pianoteq
 Exec=gamemoderun "Pianoteq 7"
 Comment=Virtual Instrument from Modartt
-Categories=Audio
+Categories=Audio;Video;AudioVideo;Recorder
 Icon=com.modartt.Pianoteq
