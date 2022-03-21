@@ -7,7 +7,7 @@ cd $(dirname $(which "$0"))
 flatpak remote-add --if-not-exists --no-gpg-verify burniintree ./burniintree
 
 if [[ $# -lt 1 ]]; then
-    ids=$(ls *.yml | sed 's/\.json//')
+    ids=$(ls *.json | sed 's/\.json//')
 else
     ids="$@"
 fi
