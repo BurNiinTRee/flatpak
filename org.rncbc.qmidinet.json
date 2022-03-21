@@ -1,0 +1,32 @@
+{
+  "app-id": "org.rncbc.qmidinet",
+  "runtime": "org.kde.Platform",
+  "runtime-version": "6.2",
+  "sdk": "org.kde.Sdk",
+  "command": "qmidinet",
+  "finish-args": [
+    "--share=network",
+    "--socket=x11",
+    "--filesystem=xdg-run/pipewire-0"
+  ],
+  "modules": [
+    "./shared-modules/linux-audio/jack2.json",
+    {
+      "name": "qmidinet",
+      "config-opts": [
+        "-DCONFIG_ALSA_MIDI=NO"
+      ],
+      "cleanup": [
+        "/share/icons/hicolor/scalable"
+      ],
+      "buildsystem": "cmake-ninja",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://git.code.sf.net/p/qmidinet/code",
+          "tag": "master"
+        }
+      ]
+    }
+  ]
+}

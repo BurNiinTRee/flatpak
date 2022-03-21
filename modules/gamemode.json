@@ -1,0 +1,36 @@
+{
+  "name": "gamemodestuff",
+  "buildsystem": "simple",
+  "build-commands": [],
+  "modules": [
+    {
+      "name": "gamemode",
+      "buildsystem": "meson",
+      "config-opts": [
+        "-Dwith-sd-bus-provider=no-daemon",
+        "-Dwith-examples=false"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/FeralInteractive/gamemode",
+          "tag": "1.6.1"
+        }
+      ]
+    },
+    {
+      "name": "gamemoderun",
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -Dm755 data/gamemoderun -t /app/bin"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/FeralInteractive/gamemode",
+          "tag": "1.6.1"
+        }
+      ]
+    }
+  ]
+}

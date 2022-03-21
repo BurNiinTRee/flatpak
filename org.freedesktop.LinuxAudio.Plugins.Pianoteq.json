@@ -1,0 +1,28 @@
+{
+  "id": "org.freedesktop.LinuxAudio.Plugins.Pianoteq",
+  "branch": "21.08",
+  "runtime": "org.freedesktop.LinuxAudio.BaseExtension",
+  "runtime-version": "21.08",
+  "sdk": "org.freedesktop.Sdk",
+  "build-extension": true,
+  "build-options": {
+    "prefix": "/app/extensions/Plugins/Pianoteq"
+  },
+  "modules": [
+    {
+      "name": "Pianoteq",
+      "buildsystem": "simple",
+      "build-commands": [
+        "mkdir ${FLATPAK_DEST}/lv2",
+        "cp -r ./Pianoteq\\ 7/x86-64bit/Pianoteq\\ 7.lv2/ ${FLATPAK_DEST}/lv2",
+        "install -D -t ${FLATPAK_DEST}/vst3/ ./Pianoteq\\ 7/x86-64bit/Pianoteq\\ 7.so"
+      ],
+      "sources": [
+        {
+          "type": "dir",
+          "path": "./pianoteq_linux_v754"
+        }
+      ]
+    }
+  ]
+}

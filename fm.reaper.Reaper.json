@@ -1,0 +1,58 @@
+{
+  "app-id": "fm.reaper.Reaper",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "21.08",
+  "sdk": "org.freedesktop.Sdk",
+  "command": "reaper",
+  "finish-args": [
+    "--socket=x11",
+    "--filesystem=xdg-run/pipewire-0",
+    "--device=all",
+    "--system-talk-name=org.freedesktop.RealtimeKit1",
+    "--filesystem=home",
+    "--share=network",
+    "--env=LV2_PATH=/app/extensions/Plugins/lv2",
+    "--env=DSSI_PATH=/app/extensions/Plugins/dssi",
+    "--env=LXVST_PATH=/app/extensions/Plugins/lxvst",
+    "--env=VST3_PATH=/app/extensions/Plugins/vst3",
+    "--env=LADSPA_PATH=/app/extensions/Plugins/ladsp"
+  ],
+  "modules": [
+    "./shared-modules/linux-audio/jack2.json",
+    "./modules/gamemode.json",
+    {
+      "name": "Reaper",
+      "buildsystem": "simple",
+      "build-commands": [
+        "./install-reaper.sh --install /app/",
+        "ln -s /app/REAPER/reaper /app/bin/reaper",
+        "mkdir -p /app/share/icons/hicolor/256x256/apps/",
+        "cp ./REAPER/Resources/main.png /app/share/icons/hicolor/256x256/apps/cockos-reaper.png",
+        "install -D -T ./REAPER/Resources/main.png /app/share/icons/hicolor/256x256/apps/fm.reaper.Reaper.png",
+        "install -D ./fm.reaper.Reaper.desktop -t /app/share/applications/",
+        "install -d /app/extensions/Plugins"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://www.reaper.fm/files/6.x/reaper651_linux_x86_64.tar.xz",
+          "sha256": "2ceb7c77d2100a2efbc823f6f47d9d138cf53ba451e0fba6d873e8cc6e7c47c8"
+        },
+        {
+          "type": "file",
+          "path": "./fm.reaper.Reaper.desktop"
+        }
+      ]
+    }
+  ],
+  "add-extensions": {
+    "org.freedesktop.LinuxAudio.Plugins": {
+      "directory": "extensions/Plugins",
+      "version": "21.08",
+      "add-ld-path": "lib",
+      "merge-dirs": "lv2;vst3",
+      "subdirectories": true,
+      "no-autodownload": true
+    }
+  }
+}
