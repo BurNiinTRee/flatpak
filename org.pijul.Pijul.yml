@@ -22,12 +22,7 @@ modules:
   - name: pijul
     buildsystem: simple
     build-commands:
-      - pwd
-      - mold -run cargo build --release
-      - ls target
-      - ls target/release
-      - ls -a
-      - install -D -t /app/bin target/release/pijul
+      - mold -run cargo install pijul --version 1.0.0-beta --root "$FLATPAK_DEST"
     sources:
       - type: archive
         url: https://static.crates.io/crates/pijul/pijul-1.0.0-beta.crate
