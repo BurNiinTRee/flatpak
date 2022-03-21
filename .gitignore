@@ -1,5 +1,6 @@
 .flatpak-builder
 .vscode
+burniintree
 build-dir
 pianoteq_linux_v*
 com.modartt.Pianoteq.png

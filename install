@@ -1,11 +1,15 @@
 #!/bin/sh
 
+set -e
+
+cd $(dirname $(which "$0"))
+
+flatpak remote-add --if-not-exists --no-gpg-verify burniintree ./burniintree
+
 if [[ $# -lt 1 ]]; then
-    manifests=*.yml
+    ids=$(ls *.yml | sed 's/\.json//')
 else
-    manifests="$@"
+    ids="$@"
 fi
 
-for manifest in $manifests; do
-    flatpak-builder --force-clean build-dir --user --install "$manifest"
-done
+flatpak install burniintree $ids

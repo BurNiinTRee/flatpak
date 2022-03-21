@@ -14,7 +14,16 @@ $ flatpak-builder --force-clean build-dir --user --install <manifest>
 ```
 When prompted that some sdks or runtimes are missing, install those with
 ```bash
-$ flatpak install flathub <id>
+$ flatpak install <id>
+```
+
+There are also the `build` and `install` scripts that set up a local flatpak repo named `burniintree` and install stuff from there.
+If run without any arguments, it installs and builds all flatapks in this directory, otherwise it builds/installs only flatpaks with the given id:
+```bash
+$ # Install all applications
+$ ./build && ./install
+$ # OR install only specific flatpaks
+$ ./build <manifest-path> && ./install <app-id>
 ```
 
 ## REAPER
