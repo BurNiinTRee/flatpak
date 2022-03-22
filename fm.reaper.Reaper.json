@@ -30,6 +30,7 @@
         "cp ./REAPER/Resources/main.png /app/share/icons/hicolor/256x256/apps/cockos-reaper.png",
         "install -D -T ./REAPER/Resources/main.png /app/share/icons/hicolor/256x256/apps/fm.reaper.Reaper.png",
         "install -D ./fm.reaper.Reaper.desktop -t /app/share/applications/",
+        "install -Dm644 ./fm.reaper.Reaper.metainfo.xml -t /app/share/metainfo/",
         "install -d /app/extensions/Plugins"
       ],
       "sources": [
@@ -41,6 +42,10 @@
         {
           "type": "file",
           "path": "./fm.reaper.Reaper.desktop"
+        },
+        {
+          "type": "file",
+          "path": "./fm.reaper.Reaper.metainfo.xml"
         }
       ]
     }

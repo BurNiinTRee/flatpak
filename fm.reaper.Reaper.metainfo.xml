@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>fm.reaper.Reaper</id>
+  <launchable type="desktop-id">fm.reaper.Reaper.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+  <name>Reaper</name>
+  <summary>Digital Audio Workstation</summary>
+  <description>
+    <p>
+      REAPER is a complete digital audio production application for computers,
+      offering a full multitrack audio and MIDI recording, editing, processing, mixing and mastering toolset.
+    </p>
+    <p>
+      REAPER supports a vast range of hardware, digital formats and plugins, and can be comprehensively extended, scripted and modified.
+    </p>
+  </description>
+  <categories>
+    <category>Audio</category>
+    <category>Video</category>
+    <category>AudioVideo</category>
+    <category>AudioVideoEditing</category>
+    <category>Recorder</category>
+  </categories>
+  <content_rating type="oars-1.1" />
+  <url type="homepage">https://reaper.fm</url>
+  <releases>
+    <release version="6.51" date="2022-03-05"/>
+  </releases>
+</component>
