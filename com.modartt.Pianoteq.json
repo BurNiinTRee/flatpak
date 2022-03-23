@@ -10,7 +10,8 @@
     "--filesystem=xdg-config/pipewire/:ro",
     "--device=all",
     "--system-talk-name=org.freedesktop.RealtimeKit1",
-    "--share=network"
+    "--share=network",
+    "--share=ipc"
   ],
   "modules": [
     "./shared-modules/linux-audio/jack2.json",

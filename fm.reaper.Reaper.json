@@ -6,6 +6,7 @@
   "command": "reaper",
   "finish-args": [
     "--socket=x11",
+    "--share=ipc",
     "--filesystem=xdg-run/pipewire-0",
     "--device=all",
     "--system-talk-name=org.freedesktop.RealtimeKit1",
