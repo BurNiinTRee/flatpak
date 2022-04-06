@@ -28,7 +28,6 @@
         "./install-reaper.sh --install /app/",
         "ln -s /app/REAPER/reaper /app/bin/reaper",
         "mkdir -p /app/share/icons/hicolor/256x256/apps/",
-        "cp ./REAPER/Resources/main.png /app/share/icons/hicolor/256x256/apps/cockos-reaper.png",
         "install -D -T ./REAPER/Resources/main.png /app/share/icons/hicolor/256x256/apps/fm.reaper.Reaper.png",
         "install -D ./fm.reaper.Reaper.desktop -t /app/share/applications/",
         "install -Dm644 ./fm.reaper.Reaper.metainfo.xml -t /app/share/metainfo/",
@@ -37,8 +36,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://www.reaper.fm/files/6.x/reaper651_linux_x86_64.tar.xz",
-          "sha256": "2ceb7c77d2100a2efbc823f6f47d9d138cf53ba451e0fba6d873e8cc6e7c47c8"
+          "url": "https://www.reaper.fm/files/6.x/reaper653_linux_x86_64.tar.xz",
+          "sha256": "bc5e8e27cc8c4dab22f142b7d1e02408689f6f752c5fbd4206164aded8d6142b"
         },
         {
           "type": "file",
