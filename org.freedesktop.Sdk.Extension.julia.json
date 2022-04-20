@@ -1,0 +1,44 @@
+{
+  "id": "org.freedesktop.Sdk.Extension.julia",
+  "branch": "21.08",
+  "runtime": "org.freedesktop.Sdk",
+  "runtime-version": "21.08",
+  "build-extension": true,
+  "sdk": "org.freedesktop.Sdk",
+  "build-options": {
+    "prefix": "/usr/lib/sdk/julia"
+  },
+  "modules": [
+    {
+      "name": "julia",
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -d /usr/lib/sdk/",
+        "cp -r bin lib libexec share /usr/lib/sdk/julia"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://julialang-s3.julialang.org/bin/linux/x64/1.7/julia-1.7.2-linux-x86_64.tar.gz",
+          "sha256": "a75244724f3b2de0e7249c861fbf64078257c16fb4203be78f1cf4dd5973ba95"
+        }
+      ]
+    },
+    {
+      "name": "scripts",
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -Dm755 enable.sh -t /usr/lib/sdk/julia"
+      ],
+      "sources": [
+        {
+          "type": "script",
+          "dest-filename": "enable.sh",
+          "commands": [
+            "export PATH=$PATH:/usr/lib/sdk/julia/bin"
+          ]
+        }
+      ]
+    }
+  ]
+}
