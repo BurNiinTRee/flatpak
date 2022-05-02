@@ -36,8 +36,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://www.reaper.fm/files/6.x/reaper654_linux_x86_64.tar.xz",
-          "sha256": "0b28a2fff0d591c529ac43ba8985fda3c28dbf858cb8122026eedef543da8e2e"
+          "url": "https://www.reaper.fm/files/6.x/reaper656_linux_x86_64.tar.xz",
+          "sha256": "cace1c9aaafbd05d1132668f0ddbec15ab80c106692523bbd5a29206007965b9"
         },
         {
           "type": "file",
