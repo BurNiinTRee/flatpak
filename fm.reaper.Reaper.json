@@ -28,10 +28,17 @@
         "./install-reaper.sh --install /app/",
         "ln -s /app/REAPER/reaper /app/bin/reaper",
         "mkdir -p /app/share/icons/hicolor/256x256/apps/",
+        "mkdir -p /app/share/icons/hicolor/256x256/mimetypes/",
         "install -D -T ./REAPER/Resources/main.png /app/share/icons/hicolor/256x256/apps/fm.reaper.Reaper.png",
-        "install -D ./fm.reaper.Reaper.desktop -t /app/share/applications/",
+        "install -D -T ./REAPER/Resources/cockos-reaper-document.png /app/share/icons/hicolor/256x256/mimetypes/fm.reaper.Reaper.x-reaper-project.png",
+        "install -D -T ./REAPER/Resources/cockos-reaper-backup.png /app/share/icons/hicolor/256x256/mimetypes/fm.reaper.Reaper.x-reaper-backup.png",
+        "install -D -T ./REAPER/Resources/cockos-reaper-theme.png /app/share/icons/hicolor/256x256/mimetypes/fm.reaper.Reaper.x-reaper-theme.png",
         "install -Dm644 ./fm.reaper.Reaper.metainfo.xml -t /app/share/metainfo/",
-        "install -d /app/extensions/Plugins"
+        "install -Dm644 ./fm.reaper.Reaper.mime.xml -t /app/share/mime/packages",
+        "install -D ./fm.reaper.Reaper.desktop -t /app/share/applications/",
+        "install -d /app/extensions/Plugins",
+        "update-mime-database /app/share/mime",
+        "install -D -t /app/share/icons/Adwaita/256x256/mimetypes /app/share/icons/hicolor/256x256/mimetypes/*"
       ],
       "sources": [
         {
@@ -46,6 +53,10 @@
         {
           "type": "file",
           "path": "./fm.reaper.Reaper.metainfo.xml"
+        },
+        {
+          "type": "file",
+          "path": "./fm.reaper.Reaper.mime.xml"
         }
       ]
     }

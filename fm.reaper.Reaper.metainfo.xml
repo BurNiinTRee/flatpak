@@ -22,6 +22,11 @@
     <category>AudioVideoEditing</category>
     <category>Recorder</category>
   </categories>
+  <mimetypes>
+    <mimetype>application/x-reaper-project</mimetype>
+    <mimetype>application/x-reaper-backup</mimetype>
+    <mimetype>application/x-reaper-theme</mimetype>
+  </mimetypes>
   <content_rating type="oars-1.1" />
   <url type="homepage">https://reaper.fm</url>
   <releases>
