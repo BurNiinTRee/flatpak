@@ -1,4 +1,5 @@
 .flatpak-builder
+.flatpaks
 .vscode
 burniintree
 build-dir
