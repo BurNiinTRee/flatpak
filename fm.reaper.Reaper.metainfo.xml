@@ -30,6 +30,9 @@
   <content_rating type="oars-1.1" />
   <url type="homepage">https://reaper.fm</url>
   <releases>
+    <release version="6.68" date="2022-09-22"/>
+    <release version="6.67" date="2022-09-07"/>
+    <release version="6.66" date="2022-08-17"/>
     <release version="6.65" date="2022-08-12"/>
     <release version="6.53" date="2022-03-29"/>
     <release version="6.51" date="2022-03-05"/>
